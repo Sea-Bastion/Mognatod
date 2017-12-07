@@ -15,14 +15,14 @@ func _input(event):
 			hide()
 			get_parent().get_node("B3").show()
 
-		if event.is_action_released("ui_down"):
+		elif event.is_action_released("ui_down"):
 			hide()
 			get_parent().get_node("B1").show()
 
-		if event.is_action_released("ui_left"):
+		elif event.is_action_released("ui_left"):
 			hide()
 			get_parent().get_node("A2").show()
 
-		if event.is_action_released("ui_right"):
+		elif event.is_action_released("ui_right"):
 			hide()
 			get_parent().get_node("C2").show()

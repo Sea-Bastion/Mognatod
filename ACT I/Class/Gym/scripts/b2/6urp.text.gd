@@ -11,6 +11,7 @@ func _draw():
 		Globals.set("Gym_6urp_talk1", true)
 		textbox.play('black')
 		textbox.show()
+		show()
 
 
 func _finished():
