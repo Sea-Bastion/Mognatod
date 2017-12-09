@@ -1,28 +1,18 @@
 extends Node2D
 
-
-func _hide():
-	set_process_input(false)
-
+onready var done = false
+onready var up = get_parent().get_node("B3")
+onready var down = get_parent().get_node("B1")
+onready var left = get_parent().get_node("A2")
+onready var right = get_parent().get_node("C2")
 
 func _draw():
-	set_process_input(true)
+	if not done:
+		first()
+		done = true
 
+func _hide():
+	done = false
 
-func _input(event):
-	if Globals.get("CanWalk"):
-		if event.is_action_released("ui_up"):
-			hide()
-			get_parent().get_node("B3").show()
-
-		elif event.is_action_released("ui_down"):
-			hide()
-			get_parent().get_node("B1").show()
-
-		elif event.is_action_released("ui_left"):
-			hide()
-			get_parent().get_node("A2").show()
-
-		elif event.is_action_released("ui_right"):
-			hide()
-			get_parent().get_node("C2").show()
+func first():
+	get_node("/root/global").position(self, up, down, left, right)

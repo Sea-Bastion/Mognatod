@@ -931,7 +931,7 @@ texture = ExtResource( 1 )
 
 [node name="A1" type="Node2D" parent="."]
 
-visibility/visible = false
+editor/display_folded = true
 script/script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="A1"]
@@ -1058,6 +1058,7 @@ texture = ExtResource( 233 )
 [node name="B2" type="Node2D" parent="."]
 
 editor/display_folded = true
+visibility/visible = false
 script/script = ExtResource( 234 )
 
 [node name="6urp" type="AnimatedSprite" parent="B2"]
@@ -1067,7 +1068,6 @@ transform/scale = Vector2( 4.6875, 4.6875 )
 z/z = 1
 frames = SubResource( 2 )
 animation = "idle"
-frame = 1
 playing = true
 
 [node name="text" type="AnimatedSprite" parent="B2"]
@@ -1193,6 +1193,7 @@ texture = ExtResource( 785 )
 
 [node name="C3" type="Node2D" parent="."]
 
+editor/display_folded = true
 visibility/visible = false
 script/script = ExtResource( 786 )
 
