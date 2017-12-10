@@ -8,10 +8,11 @@ func _draw():
 		set_process_input(true)
 		play("LearnWalk0")
 		var textbox = get_node("/root/Gym/textbox")
-		Globals.set("Gym_6urp_talk1", true)
 		textbox.play('black')
 		textbox.show()
 		show()
+		Globals.set("Gym_6urp_talk1", true)
+		Globals.set("CanPause", true)
 
 
 func _finished():

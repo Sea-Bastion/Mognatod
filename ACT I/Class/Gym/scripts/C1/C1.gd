@@ -15,4 +15,4 @@ func _hide():
 	done = false
 
 func first():
-	get_node("/root/global").position(self, up, down, left, right)
+	get_node("/root/global/global").position(self, up, down, left, right)
